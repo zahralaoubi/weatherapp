@@ -1,9 +1,9 @@
 
-const apiKey = 'YOUR_API_KEY';
+const apiKey = '409460f3b3aff1f74c9b289ccfc58115';
 
 async function getWeather() {
     const location = document.getElementById("location-input").value;
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}&units=metric`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}`;
 
     try {
         const response = await fetch(url);
@@ -21,7 +21,25 @@ async function getWeather() {
         document.getElementById("humidity").textContent = `Humidity: ${data.main.humidity}%`;
         document.getElementById("wind").textContent = `Wind Speed: ${data.wind.speed} m/s`;
 
-    } catch (error) {
-        alert("Failed to fetch weather data. Please try again later.");
+
+
+    } catch (error){
+        console.log(error)
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
